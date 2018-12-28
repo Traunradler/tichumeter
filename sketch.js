@@ -9,7 +9,7 @@ var breite=40;
 //daten.push(v3);
 
 function setup() {
-myCanvas=createCanvas(800, 600);
+myCanvas=createCanvas(600, 600);
 myCanvas.id('myCanvas');
 myCanvas.parent('canvasHolder');
 v0=createVector(0, 0);
@@ -87,12 +87,12 @@ function drawDiagramm(){
 
 	stroke(0);
 	strokeWeight(1);
-	line(0,0,740,0);
-	line(0,-500,740,-500);
-	line(0,-250,740,-250);
+	line(0,0,540,0);
+	line(0,-500,540,-500);
+	line(0,-250,540,-250);
 	strokeWeight(0);
-	text('500',740,-250);
-	text('1000',740,-500);
+	text('500',540,-250);
+	text('1000',540,-500);
 }
 
 function enterData()

@@ -40,7 +40,7 @@ loeschen.mousePressed(deleteData);
 }
 
 function draw() {
-background(200);
+background(217,233,252);
 translate(nullpunkt_x,nullpunkt_y);
 drawDiagramm();
 drawGraph();
@@ -54,15 +54,15 @@ function drawGraph(){
 	for (var i=0; i<daten.length;i++) //Punkte zeichnen (rot und grün)
 		{
 		//x Punkte rot;
-		strokeWeight(5);
-		stroke(255,0,0);
+		strokeWeight(8);
+		stroke(228,158,159);
 		point(i*breite, (-daten[i].x)/2)
 		strokeWeight(0);
 		text((daten[i].x), i*breite+5, (-daten[i].x)/2)
     //y Punkte grün
 
-		strokeWeight(5);
-		stroke(0,200,24);
+		strokeWeight(8);
+		stroke(239,208,147);
 		point(i*breite,(-daten[i].y)/2-1)
 		strokeWeight(0);
 		text(daten[i].y, i*breite+5, (-daten[i].y)/2)
@@ -71,12 +71,12 @@ function drawGraph(){
 	for (var i=0; i<daten.length-1;i++)
 		{
 			//rote linie
-			strokeWeight(1);
-			stroke(255,0,0);
+			strokeWeight(2);
+			stroke(228,158,159);
 			line(i*breite, (-daten[i].x)/2, (i+1)*breite, (-daten[i+1].x)/2);
 
 			//grüne Linie
-			stroke(0,200,24);
+			stroke(239,208,147);
 			line(i*breite, (-daten[i].y)/2-1, (i+1)*breite, (-daten[i+1].y)/2-1);
 		}
 

@@ -1,15 +1,15 @@
 var v0,v1,v2,v3,v4 ;
 var daten=[];
 var nullpunkt_x=20;
-var nullpunkt_y=550;
-var breite=40;
+var nullpunkt_y=570;
+var breite=35;
 //let daten=[];
 //daten.push(v1);
 //daten.push(v2);
 //daten.push(v3);
 
 function setup() {
-myCanvas=createCanvas(600, 600);
+myCanvas=createCanvas(600, 620);
 myCanvas.id('myCanvas');
 myCanvas.parent('canvasHolder');
 v0=createVector(0, 0);
@@ -48,8 +48,19 @@ drawGraph();
 
 function drawGraph(){
  //for(var i=0; i<daten.length;i++)
+	textSize(16);
 	//{
+	for (var i=0; i<daten.length-1;i++)
+		{
+			//rote linie
+			strokeWeight(2);
+			stroke(228,158,159);
+			line(i*breite, (-daten[i].x)/2, (i+1)*breite, (-daten[i+1].x)/2);
 
+			//grüne Linie
+			stroke(239,208,147);
+			line(i*breite, (-daten[i].y)/2-1, (i+1)*breite, (-daten[i+1].y)/2-1);
+		}
 
 	for (var i=0; i<daten.length;i++) //Punkte zeichnen (rot und grün)
 		{
@@ -68,17 +79,7 @@ function drawGraph(){
 		text(daten[i].y, i*breite+5, (-daten[i].y)/2)
 		}
 
-	for (var i=0; i<daten.length-1;i++)
-		{
-			//rote linie
-			strokeWeight(2);
-			stroke(228,158,159);
-			line(i*breite, (-daten[i].x)/2, (i+1)*breite, (-daten[i+1].x)/2);
 
-			//grüne Linie
-			stroke(239,208,147);
-			line(i*breite, (-daten[i].y)/2-1, (i+1)*breite, (-daten[i+1].y)/2-1);
-		}
 
 
 }
@@ -86,13 +87,23 @@ function drawGraph(){
 function drawDiagramm(){
 
 	stroke(0);
+	strokeWeight(2);
+	stroke(100);
+	line(0,0,539,0);
+	line(0,-500,539,-500);
 	strokeWeight(1);
-	line(0,0,540,0);
-	line(0,-500,540,-500);
-	line(0,-250,540,-250);
+
+  for(var i=50; i<500; i+=50)
+	{line(0,-i,539,-i);
+	//line(0,-100,539,-100);
+	//line(0,-150,539,-150);
+	//line(0,-200,539,-200);
+	//line(0,-250,539,-250);
+}
+
 	strokeWeight(0);
-	text('500',540,-250);
-	text('1000',540,-500);
+	fill(50);
+	text('1000',541,-500);
 }
 
 function enterData()

@@ -18,24 +18,17 @@ daten.push(v0);
 
 translate(nullpunkt_x,nullpunkt_y);
 
-var rot=createInput("","number");
-rot.class("form-control")
-rot.parent('rotHolder');
-rot.id('rot');
+var rot=select('#rot');
+var gelb=select('#gelb');
+var gelb=createInput("","number");
 
-var gruen=createInput("","number");
-gruen.class('form-control');
-gruen.id('gruen');
-gruen.parent('gruenHolder');
 
-var eintragen=createButton('Eintragen');
-eintragen.class('btn btn-primary');
-eintragen.parent('eintragenHolder');
+var eintragen=select('#eintragenHolder');
+//eintragen.class('btn btn-primary');
+//eintragen.parent('eintragenHolder');
 eintragen.mousePressed(enterData);
 
-var loeschen=createButton('Löschen');
-loeschen.class('btn btn-secondary');
-loeschen.parent('loeschenHolder');
+var loeschen=select('#loeschenHolder');
 loeschen.mousePressed(deleteData);
 }
 
@@ -110,14 +103,14 @@ function enterData()
 {
 
 	var runde=daten.length-1;
- if(!(rot.value==""||gruen.value=="")){
+ if(!(rot.value==""||gelb.value=="")){
 	var xneu=daten[runde].x+int(rot.value);
-	var yneu=daten[runde].y+int(gruen.value);
+	var yneu=daten[runde].y+int(gelb.value);
   if(Number.isInteger(xneu)|Number.isInteger(yneu))
 	{
 	daten.push(createVector(xneu,yneu));
 	rot.value='';
-	gruen.value='';
+	gelb.value='';
 	}
 	if(xneu>=1000||yneu>1000){
 		createP("Spiel ist aus");

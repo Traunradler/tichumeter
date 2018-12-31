@@ -20,7 +20,6 @@ translate(nullpunkt_x,nullpunkt_y);
 
 var rot=select('#rot');
 var gelb=select('#gelb');
-var gelb=createInput("","number");
 
 
 var eintragen=select('#eintragenHolder');
@@ -112,13 +111,22 @@ function enterData()
 	rot.value='';
 	gelb.value='';
 	}
-	if(xneu>=1000||yneu>1000){
-		createP("Spiel ist aus");
+	if(xneu>=1000){
+		var rotgewonnen=createP('Rot hat gewonnen');
+		rotgewonnen.parent('rotgew')
+		rotgewonnen.class('gewonnen rot');
 	}
+	if(yneu>=1000)
+	var gelbgewonnen=createP('Gelb hat gewonnen');
+	gelbgewonnen.parent('gelbgew')
+	gelbgewonnen.class('gewonnen gelb');
 	}
 }
 
 function deleteData()
 {
+	if(daten.length>1)
+	{
 	daten.pop();
+	}
 }

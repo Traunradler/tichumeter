@@ -23,13 +23,14 @@
 
 }
 h1{
-  font-family: sans-serif;
+  font-family: 'MedievalSharp', cursive;
   text-align: center;
   font-size: 5em;
   margin-top:20px;
   margin-bottom: 20px;
 }
 p{
+
   font-size:1.5em;
 
 }
@@ -49,7 +50,7 @@ p{
 }
 .form-control{
 
-  margin: 5px;
+  margin: 10px;
   padding: 5px;
   width: 200px;
   font-size: 20px;
@@ -58,10 +59,10 @@ p{
   border-radius:.2rem;
 
 }
-#gelb{
+.gelb{
   background-color: rgb(239,208,147)
 }
-#rot{
+.rot{
   background-color: rgb(228,158,159)
 }
 
@@ -69,6 +70,7 @@ p{
 border: 1px solid #5D6063;
 border-radius: 5px
   }
+
 .button-container{
   display:flex;
   justify-content:center;
@@ -80,7 +82,7 @@ border-radius: 5px
   width:300px;
   display:flex;
   justify-content: center;
-
+  margin-bottom: 20px;
 
 }
 
@@ -98,4 +100,25 @@ border-radius: 5px
 .btn-secondary{
   background-color: #dc3543;
   color:#fff;
+}
+
+ #gelbgew{
+  position:absolute;
+  left: 350px;
+  top: 200px;
+
+}
+#rotgew{
+  position:absolute;
+  left: 350px;
+  top: 200px;
+
+}
+
+.gewonnen{
+  padding:2px;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 3em;
+  border: 2px solid black;
+
 }

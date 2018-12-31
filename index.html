@@ -12,7 +12,7 @@
 	<script src="libraries/p5.sound.js"></script>
 	<script src="sketch.js"></script>
   <link rel='stylesheet' href='styles.css'/>
-
+	<link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
 
 </head>
 <body>
@@ -26,11 +26,11 @@
 	<div class='input-container'>
 		<div class='spalte links'>
 			<div><p>Team 1</p></div>
-			<input type='number' max='300' step='5' inputmode='numeric' id='rot' class='form-control'> </input>
+			<input type='number' max='300' step='5' inputmode='numeric' id='rot'  class='form-control rot'> </input>
 		</div>
 		<div class='spalte rechts'>
 			<div><p> Team 2</p></div>
-			<input type='number' inputmode='numeric' max='300' step='5' id="gelb" class='form-control'></input>
+			<input type='number' inputmode='numeric' max='300' step='5' id='gelb'  class='form-control gelb'></input>
 		</div>
 	</div>
 	<div class='button-container'>
@@ -42,7 +42,7 @@
 		</div>
 	</div>
 	</div>
-
-
+	<div id='rotgew'></div>
+	<div id='gelbgew'></div>
 </body>
 </html>
